@@ -47,7 +47,7 @@ function Hero() {
 
           {/* Resume Button */}
           <a
-            href="/Shikha_Ramrakhyani_Resume.pdf"
+            href="https://drive.google.com/file/d/1_0oRSlLmGWLEIdfCWtdOEZ-3X6_k92z3/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-outline-light"
