@@ -19,8 +19,8 @@ const projects = [
       "React Toastify",
       "React Charts",
     ],
-    liveLink: "https://fe-anvaya-crm.vercel.app/",
-    gitHubRepo: "https://github.com/Shikha246/FE_AnvayaCRM.git",
+    liveLink: "https://lead-flow-crm-frontend-main.vercel.app/",
+    gitHubRepo: "https://github.com/Shikha246/LeadFlow-CRM-frontend.git",
   },
 
   {
