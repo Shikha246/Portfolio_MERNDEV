@@ -5,7 +5,7 @@ import workasanaImg from "../images/workasana.png";
 import bookStoreImg from "../images/bookstore.png";
 const projects = [
   {
-    title: "Anvaya CRM",
+    title: "LeadFlow CRM",
     image: crmImg,
     description:
       "Full stack CRM with lead management and analytics.",
