@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaGithub, FaExternalLinkAlt, FaTimes } from "react-icons/fa";
 import crmImg from "../images/crm.png";
 import taskForgeImg from "../images/taskForge.png";
 import bookStoreImg from "../images/bookstore.png";
@@ -62,6 +63,16 @@ const projects = [
 ];
 
 function Projects() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") setSelectedImage(null);
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
+
   return (
     <section className="container py-5">
       <h2 className="section-title">Projects</h2>
@@ -78,8 +89,9 @@ function Projects() {
             >
               <img
                 src={project.image}
-                alt=""
+                alt={project.title}
                 className="project-img"
+                onClick={() => setSelectedImage(project.image)}
               />
 
               <div className="p-3">
@@ -112,6 +124,35 @@ function Projects() {
         ))}
 
       </div>
+
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            className="image-modal-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImage(null)}
+          >
+            <motion.div
+              className="image-modal-content"
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className="image-modal-close"
+                onClick={() => setSelectedImage(null)}
+                aria-label="Close"
+              >
+                <FaTimes />
+              </button>
+              <img src={selectedImage} alt="Project preview" />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
