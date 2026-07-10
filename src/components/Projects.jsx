@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import crmImg from "../images/crm.png";
-import workasanaImg from "../images/workasana.png";
+import taskForgeImg from "../images/taskForge.png";
 import bookStoreImg from "../images/bookstore.png";
 const projects = [
   {
@@ -24,8 +24,8 @@ const projects = [
   },
 
   {
-    title: "Workasana",
-    image: workasanaImg,
+    title: "TaskForge",
+    image: taskForgeImg,
     description:
       "Task management platform inspired by Asana.",
     techStack: [
@@ -53,7 +53,8 @@ const projects = [
       "Node.js",
       "Express",
       "MongoDB",
-      "React Toastify"
+      "React Toastify",
+      "JWT"
     ],
     liveLink: "https://ecommerce-mern-fe-2026.vercel.app/",
     gitHubRepo: "https://github.com/Shikha246/Ecommerce-MERN-FE-2026.git",
@@ -73,7 +74,7 @@ function Projects() {
               whileHover={{
                 scale: 1.03,
               }}
-              className="project-card"
+              className="project-card py-4"
             >
               <img
                 src={project.image}
