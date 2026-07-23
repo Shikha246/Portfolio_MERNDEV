@@ -38,8 +38,8 @@ const projects = [
       "MongoDB",
       "JWT"
     ],
-    liveLink: "https://fe-anvaya-crm.vercel.app/",
-    gitHubRepo: "https://github.com/Shikha246/FE_AnvayaCRM",
+    liveLink: "https://task-forge-frontend-lyart.vercel.app/",
+    gitHubRepo: "https://github.com/Shikha246/TaskForge_Frontend.git",
   },
 
   {
