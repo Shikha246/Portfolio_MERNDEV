@@ -47,7 +47,7 @@ function Hero() {
 
           {/* Resume Button */}
           <a
-            href="https://drive.google.com/file/d/1_0oRSlLmGWLEIdfCWtdOEZ-3X6_k92z3/view?usp=sharing"
+            href="https://docs.google.com/document/d/1clxo_HFaq5Qb-ZmJgqXZzc61m3UiBuRW/edit?usp=sharing&ouid=117124534150124459756&rtpof=true&sd=true"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-outline-light"
